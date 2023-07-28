@@ -1,7 +1,7 @@
 import pandas as pd
 import bar_chart_race as bcr
 
-# Step 1: Define the start and end year
+
 start_year = '1960'
 end_year = '2021'
 
