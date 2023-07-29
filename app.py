@@ -2,15 +2,14 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 # Sample data: Replace this with your actual dataset
-data = pd.read_csv("World_Muslim_Population _Dataset.csv")
+data = pd.read_csv('your_data.csv')
 
 # Function to create the line chart for a selected country
 def plot_population(country_name):
     country_data = data[data['Country Name'] == country_name].values[0]
     years = data.columns[2:-1]
-    population = country_data[2:]  # Assuming population values start from the third column onward
+    population = country_data[2:-1]  # Exclude 'Growth_Rate' from population values
     
     plt.figure(figsize=(10, 6))
     plt.plot(years, population, marker='o')
@@ -24,8 +23,6 @@ def plot_population(country_name):
         plt.annotate(f'{y:,}', (x, y), textcoords="offset points", xytext=(0, 10), ha='center')
 
     st.pyplot(plt)
-
-
 
 # Main Streamlit app
 def main():
