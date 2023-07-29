@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Sample data: Replace this with your actual dataset
-data = pd.read_csv('your_data.csv')
+data = pd.read_csv("World_Muslim_Population _Dataset.csv")
 
 # Function to create the line chart for a selected country
 def plot_population(country_name):
