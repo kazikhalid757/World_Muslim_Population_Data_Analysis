@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
+# Sample data: Replace this with your actual dataset
+data = pd.read_csv("World_Muslim_Population _Dataset.csv")
 # Function to calculate the 5-year differences
 def calculate_5_year_differences(row):
     return [row[i+5] - row[i] if i+5 < len(row) else None for i in range(len(row))]
