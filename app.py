@@ -16,11 +16,11 @@ def plot_population(country_name):
     plt.xlabel('Year')
     plt.ylabel('Population')
     plt.title(f'Population for {country_name}')
-    plt.xticks(rotation=45)
+    plt.xticks(rotation=90)
 
-    # Annotate each data point with its population value
-    for x, y in zip(years, population):
-        plt.annotate(f'{y:,}', (x, y), textcoords="offset points", xytext=(0, 10), ha='center')
+#     # Annotate each data point with its population value
+#     for x, y in zip(years, population):
+#         plt.annotate(f'{y:,}', (x, y), textcoords="offset points", xytext=(0, 10), ha='center')
 
     st.pyplot(plt)
 
