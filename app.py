@@ -22,7 +22,7 @@ def plot_population(country_name):
 
 # Main Streamlit app
 def main():
-    st.title('Country Population Visualization')
+    st.title('Country Muslim Population Visualization')
     
     # Dropdown to select the country
     country_list = data['Country Name'].unique().tolist()
